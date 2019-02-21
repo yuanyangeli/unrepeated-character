@@ -1,0 +1,18 @@
+class Solution(object):
+    def lengthOfLongestSubstring(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        a=sorted(s)
+        count=0
+        first='0'
+        second=''
+        for x in a:
+            second = x
+            if second > first:
+                count = count + 1
+            first = second
+        return count
+            
+        
